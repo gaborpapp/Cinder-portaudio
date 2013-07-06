@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<cinder>
+<block
+	name="Cinder-portaudio"
+	id="hu.mndl.portaudio"
+	author="Gabor Papp, Botond Gabor Barna"
+	license="MIT"
+	summary="portaudio library"
+	version="19.20111121"
+	>
+	<includePath>include</includePath>
+	<platform os="macosx">
+		<staticLibrary>lib/macosx/libportaudio.a</staticLibrary>
+	</platform>
+	<platform os="msw">
+		<staticLibrary>lib/msw/portaudio.lib</staticLibrary>
+	</platform>
+</block>
+</cinder>
