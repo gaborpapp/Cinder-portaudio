@@ -1,0 +1,15 @@
+Import('env')
+
+_INCLUDES = ['../include']
+_INCLUDES = [Dir(i).abspath for i in _INCLUDES]
+
+_LIBS = ['libportaudio.a']
+if env['PLATFORM'] == 'darwin':
+	_LIBS = [File('../lib/macosx/' + s) for s in _LIBS]
+else:
+	_LIBS = []
+
+env.Append(CPPPATH = _INCLUDES)
+env.Append(LIBS = _LIBS)
+
+Return('env')

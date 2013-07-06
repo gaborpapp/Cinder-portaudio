@@ -1,0 +1,11 @@
+env = Environment()
+
+env['APP_TARGET'] = 'PaTest1'
+env['APP_SOURCES'] = ['PaTest1.cpp']
+env['DEBUG'] = 1
+
+# Cinder-portaudio
+env = SConscript('../../../scons/SConscript', exports = 'env')
+
+SConscript('../../../../../scons/SConscript', exports = 'env')
+
